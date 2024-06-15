@@ -4,6 +4,7 @@
 *{
     font-family: "Inter", sans-serif;
     margin:0;
+    text-decoration: none;
 }
 #main{
     background-image: url(img/bgMAIN.png);
@@ -43,6 +44,7 @@
     padding-left: 30px;
     background-repeat: no-repeat;
     background-position: center;
+    text-align: center;
 }
 .main-title{
     color: #2b2d35;
@@ -51,7 +53,11 @@
     text-align: center;
 }
 .title{
-    color:white
+    color:white;
+    font-size: 80px;
+    text-shadow: 5px 5px black;
+    text-align: center;
+    padding-top: 100px;
 }
 .main-subtitle{
     color:#2b2d35;
@@ -95,11 +101,161 @@
     right:20px;
     z-index: 1;
 }
-.comment-card{
+.moving-planet{
+    background-image: url(img/moving-planet.png);
+    background-repeat: no-repeat;
+    width:200px;
+    height:230px;
+    position: absolute;
+    bottom: 50px;
+    animation-name: moving-planet-main;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes moving-planet-main {
+    from{transform: translateY(0);}
+    to{transform: translateY(-150px);}
+}
+.about-content{
+    width:40%;
+    height:310px;
+    padding-left: 40px;
+    background-color: #792aff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+}
+.about-title{
+    font-size: 20px;
+    color:white;
+    max-width: 463px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-family: 'Comfortaa', sans-serif;
+}
+.about-card{
     background-image: url(img/form2.png);
     background-repeat: no-repeat;
+    width:376px;
+    height:346px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about-text{
+    padding:15px;
+}
+.about-card p{
+    color: #000;
+    font-size: 17px;
+    justify-content: flex-start;
+    text-align: left;
+    font-weight: 700;
+}
+.about-card img{
+  margin-bottom: 20px;
+}
+.skills-card{
+    background-image: url(img/form3.png);
+    background-size: cover;
+    height:450px;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top:100px;
+    margin: 20px;
+    padding-left: 10px;
+}
+.skills-card p{
+    font-size: 20px;
+    font-family: 'Comfortaa', sans-serif;
+    padding: 0 40px;
+    margin-top: 35px;
+    font-weight: 900;
+}
+#works-block img{
+    width: 28%;
+    margin-right: 20px;
+}
+.comment-card{
+    background-image: url(img/card.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2.87px 4.85px black;
 }
 .comment{
     background-image: url(img/comment.png);
-    background-size: cover;
+    background-size: contain;
+    font-weight: 700;
+    margin-left:20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 136px;
+    width: 277px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px rgb(166, 255, 0);
+    border-radius: 10px;
+}
+#comments-block{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    justify-content: space-evenly;
+    max-width:1150px;
+}
+.comment-card h3{
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 900;
+    font-size:22px;
+    padding:10px 0;
+}
+.comment-card p{
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 400;
+    font-size:20px;
+    max-width:250px;
+}
+footer{
+    background-color: #200153;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    padding: 30px 0;
+}
+.footer-links{
+    margin-right:30px;
+}
+.titel{
+    font-weight: 600;
+}
+.footer-info{
+    margin-left: 30px
+}
+.footer-info p{
+    text-align: left;
+}
+.footer-links a{
+    margin-left:20px
 }
