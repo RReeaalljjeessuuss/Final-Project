@@ -5,6 +5,40 @@
     font-family: "Inter", sans-serif;
     margin:0;
     text-decoration: none;
+    scroll-behavior: smooth;
+    transition: 0.15s;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+.logo{
+    font-size:60px;
+    color:#bbff2c;
+}
+.fixed-menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    width:100%;
+    font-size: 20px;
+    margin-left: -280px;
+    z-index: 2;
+}
+.nav-links a{
+    background-color: white;
+    border-radius: 12px;
+    padding: 10px 17px;
+    margin: 10px;
+}
+.nav-link:hover{
+    background-color: #792aff;
+    color:white;
+    transition-duration: 0.2s;
 }
 #main{
     background-image: url(img/bgMAIN.png);
@@ -109,7 +143,7 @@
     position: absolute;
     bottom: 50px;
     animation-name: moving-planet-main;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -258,4 +292,177 @@ footer{
 }
 .footer-links a{
     margin-left:20px
+}
+.mobile-button{
+    position: absolute;
+    right: 20px;
+    display: none;
+    top: 25px;
+    z-index: 2;
+}
+.hide{
+    transition: 0.35s;
+    transform: translateY(-120vh);
+}
+.show{
+    transition: 0.35s;
+    display: block;
+    transform: translateY(0px);
+}
+.mobile-menu{
+    height:100vh;
+    background-color: #200153;
+    margin-top:-10vh;
+    padding-bottom: 10vh;
+    display: none;
+}
+.mobile-nav-links{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    padding-top:20vh;
+}
+.mobile-nav-links a{
+    color:black;
+    font-size: 7vh;
+    background-color: white;
+    border-radius: 15px;
+    width:50vw;
+    height: 10vh;
+    margin: 2vw; 
+    font-family: "Comfortaa", sans-serif;
+    padding-top: 15px;
+    font-weight: 900;
+}
+
+@media (max-width: 1000px) {
+    .nav-links{
+        display: none;
+    }
+    .logo{
+        font-size:40px;
+        padding-left: 20px;
+        margin: 20px
+    }
+    .fixed-menu{
+        display: block;
+        margin-left: 0;
+    }
+    .main-content{
+        width: 80%;
+        padding-left: 1vw;
+    }
+    .main-title{
+        font-size: 9vw;
+        margin-top: 1.2vw
+    }
+    .main-subtitile{
+        font-size: 3vw;
+    }
+    .moving-planet{
+        display: none
+    }
+    .title{
+        font-size: 12vw;
+        padding: 6vw
+    }
+    .about-content{
+        flex-direction:column;
+        margin-top: 2vw;
+        padding-left: 0;
+        height: auto;
+        margin-bottom: 2vw;
+    }
+    .about-card{
+        order: -1;
+        background-size: cover;
+        width: 326px;
+        padding: 2vw;
+        border-radius: 15px;
+        padding-top: 7vw
+    }
+    .about-card img{
+        width: 60%;
+    }
+    .about-card p{
+        font-size: 2.5vw;
+    }
+    .about-text{
+        text-align:center;
+    }
+    .about-text .button{
+        margin: auto;
+        width:90%
+    }
+    .skills-card{
+        width: 80%;
+        border-bottom-right-radius: 15px;
+    }
+    .languages img{
+        width: 15vw
+    }
+    .skills-card p{
+        text-align: center;
+    }
+    #works-block{
+        flex-direction: column;
+    }
+    #works-block img{
+        width: 50vw;
+        margin-bottom: 10vw
+    }
+    #comments-block{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .comment{
+        margin-bottom: 5vw;
+        background-image: url(img/comment-mobile.png);
+        background-size: cover;
+        border-right: 2px solid black;
+        border-left: 2px solid black;
+        width:40vw
+    }
+    .comment-card{
+        margin-bottom: 2vw;
+        width:40vw;
+        background-size: cover;
+    }
+    .footer-info{
+        margin:0;
+    }
+    .footer-links{
+        margin:0;
+    }
+    footer{
+        justify-content: space-around;
+    }
+    .footer-year{
+        margin-right:14vw
+    }
+    #main-block img{
+        margin-bottom: -5vw;
+    }
+    .planet{
+        display:none;
+    }
+    .mobile-button{
+        display:block;
+        cursor: pointer;
+    }
+    .mobile-button:hover{
+        transform: scale(1.1,1.1);
+    }
+    .mobile-menu{
+        display: block;
+        margin-top: 20vh
+    }
+    .logo{
+        position: sticky;
+        margin-bottom:-300px;
+        z-index: 2;
+    }
 }
